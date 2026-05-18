@@ -1,8 +1,8 @@
-# LabLens – Backend (Hardware / Edge Layer)
+# LabLens – Backend (Hardware and Detection)
 
 > Real-time computer lab occupancy detection using machine vision.
 
-The Backend is the physical edge layer of the LabLens system. It uses a Raspberry Pi 5 and camera module to capture live video, runs occupancy detection using YOLOv8 and OpenCV, and transmits structured occupancy data to the Center API in real time.
+The Backend is the physical and main detection layer of the LabLens system. It uses a Raspberry Pi 5 and camera module to capture live video, runs occupancy detection using YOLOv8 and OpenCV, and transmits structured occupancy data to the Center API in real time.
 
 ---
 
@@ -10,7 +10,7 @@ The Backend is the physical edge layer of the LabLens system. It uses a Raspberr
 
 1. The Raspberry Pi camera continuously captures live frames from the lab environment.
 2. OpenCV prepares each frame and manages predefined desk zone regions.
-3. YOLOv8 runs inference on each frame to detect people and generate bounding boxes.
+3. YOLOv8 runs inference on each frame to detect humans and generate bounding boxes.
 4. Detected objects are mapped to desk zones (Regions of Interest) to determine seat status.
 5. Time-based logic distinguishes between **Occupied**, **Idle/Away**, and **Available** states.
 6. Results are structured into JSON and sent to the Center via a POST request.
