@@ -3,7 +3,7 @@
 This folder contains the 3D printable enclosure designed to securely mount the Raspberry Pi 5 and Camera Module for stable lab deployment.
 
 The design was inspired by creators **StealthNode** and **sl1zer**, and adapted for LabLens's specific mounting and camera angle requirements.
-
+https://www.thingiverse.com/thing:7354846
 ---
 
 ## Files
